@@ -2,3 +2,6 @@ wine-reviews/*
 data/*
 .ipynb_checkpoints
 .DS_Store
+._.DS_Store
+**/.DS_Store
+**/._.DS_Store

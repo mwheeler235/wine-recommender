@@ -10,3 +10,21 @@ Sentence Transformers (a.k.a. SBERT) is the go-to Python module for accessing, u
 <img src="https://github.com/mwheeler235/wine-reviews/blob/main/img/umap cluster viz.png" width="400" height="400">
 
 * Can we leverage S-BERT embeddings to create a recommender system for "customers" that have tried several wines?
+
+# Wine Recommender
+
+Relying solely on Description embeddings tends to recommend wines from tasters with similar lexicons. As such, we can create embeddings for Variety and also for Title, then combine these with a weighted average. In the average, we can tweak the preference to favor Variety embeddings since the variety of a wine more closely aligns with a customer's flavor palate (rather than the title or the description). 
+'''
+combined_embeddings = ((1/2)*corpus_embeddings + 2*corpus_variety_embeddings + corpus_title_embeddings) / 3
+'''
+
+Then, finally, we can tweak the recommendation to weight a lower price and a higher rating.
+'''
+weight_points = .5
+weight_price = .5
+df_user0_reccs2['weighted_customer_value'] = (df_user0_reccs2['points'] * weight_points) + -1*(df_user0_reccs2['price'] * weight_price)
+'''
+
+Using Averaged Embeddings (Description, Variety, and Title), for the preferred wine with title 'La Castellina 2007 Squarcialupi Riserva  (Chianti Classico)' and Variety: 'Sangiovese', the recommendations are show below.
+
+<img src="https://github.com/mwheeler235/wine-reviews/blob/main/img/reccs.png" width="400" height="400">

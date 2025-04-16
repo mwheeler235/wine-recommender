@@ -27,4 +27,4 @@ df_user0_reccs2['weighted_customer_value'] = (df_user0_reccs2['points'] * weight
 
 Using Averaged Embeddings (Description, Variety, and Title), for the preferred wine with title 'La Castellina 2007 Squarcialupi Riserva  (Chianti Classico)' and Variety: 'Sangiovese', the recommendations are shown below.
 
-<img src="https://github.com/mwheeler235/wine-reviews/blob/main/img/reccs.png" width="1000" height="400">
+<img src="https://github.com/mwheeler235/wine-reviews/blob/main/img/reccs.png" width="850" height="400">

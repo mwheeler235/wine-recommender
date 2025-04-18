@@ -9,6 +9,12 @@ Sentence Transformers (a.k.a. SBERT) is the go-to Python module for accessing, u
 
 <img src="https://github.com/mwheeler235/wine-reviews/blob/main/img/umap cluster viz.png" width="400" height="400">
 
+Despite rather adequate cluster coherence, the Top Words per cluster do not seem to be much different, indicating that most reviews use a standard bang of descriptors.
+
+<img src="https://github.com/mwheeler235/wine-reviews/blob/main/img/top words.png">
+
+Let's now take a look at other considerations with this dataset.
+
 * Can we leverage S-BERT embeddings to create a recommender system for "customers" that have tried several wines?
 
 # Wine Recommender

@@ -9,7 +9,12 @@ Sentence Transformers (a.k.a. SBERT) is the go-to Python module for accessing, u
 
 <img src="https://github.com/mwheeler235/wine-reviews/blob/main/img/umap cluster viz.png" width=50% height=50%>
 
-Despite rather adequate cluster coherence, the Top Words per cluster do not seem to be much different, indicating that most reviews use a standard bang of descriptors.
+Despite rather adequate within cluster coherence, the Silhouette score is quite low, indicating weak clustering. 
+```
+Silhouette Score: 0.024117592722177505
+Weak clustering
+```
+Additionally, the Top Words per cluster do not seem to be much different, indicating that most reviews use a standard bag of descriptors.
 
 <img src="https://github.com/mwheeler235/wine-reviews/blob/main/img/top_words.png" width=20% height=20%>
 

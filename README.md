@@ -7,11 +7,11 @@ Sentence Transformers (a.k.a. SBERT) is the go-to Python module for accessing, u
 
 * Can we cluster wine reviews based on S-BERT embeddings?
 
-<img src="https://github.com/mwheeler235/wine-reviews/blob/main/img/umap cluster viz.png" width="400" height="400">
+<img src="https://github.com/mwheeler235/wine-reviews/blob/main/img/umap cluster viz.png" width=20% height=20%>
 
 Despite rather adequate cluster coherence, the Top Words per cluster do not seem to be much different, indicating that most reviews use a standard bang of descriptors.
 
-<img src="https://github.com/mwheeler235/wine-reviews/blob/main/img/top_words.png" width=25% height=25%>
+<img src="https://github.com/mwheeler235/wine-reviews/blob/main/img/top_words.png" width=20% height=20%>
 
 Let's now take a look at other considerations with this dataset.
 
@@ -33,4 +33,4 @@ df_user0_reccs2['weighted_customer_value'] = (df_user0_reccs2['points'] * weight
 
 Using Averaged Embeddings (Description, Variety, and Title), for the preferred wine with title 'La Castellina 2007 Squarcialupi Riserva  (Chianti Classico)' and Variety: 'Sangiovese', the recommendations are shown below.
 
-<img src="https://github.com/mwheeler235/wine-reviews/blob/main/img/reccs.png" width="800" height="425">
+<img src="https://github.com/mwheeler235/wine-reviews/blob/main/img/reccs.png" width=20% height=20%>

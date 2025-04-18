@@ -11,7 +11,7 @@ Sentence Transformers (a.k.a. SBERT) is the go-to Python module for accessing, u
 
 Despite rather adequate cluster coherence, the Top Words per cluster do not seem to be much different, indicating that most reviews use a standard bang of descriptors.
 
-<img src="https://github.com/mwheeler235/wine-reviews/blob/main/img/top_words.png" width=100% height=100%>
+<img src="https://github.com/mwheeler235/wine-reviews/blob/main/img/top_words.png" width=25% height=25%>
 
 Let's now take a look at other considerations with this dataset.
 

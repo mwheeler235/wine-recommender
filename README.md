@@ -1,9 +1,9 @@
-# SentenceTransformers Documentation (excerpt) 
+## SentenceTransformers Documentation (excerpt) 
 https://sbert.net/
 
 Sentence Transformers (a.k.a. SBERT) is the go-to Python module for accessing, using, and training state-of-the-art embedding and reranker models. It can be used to compute embeddings using Sentence Transformer models (quickstart) or to calculate similarity scores using Cross-Encoder (a.k.a. reranker) models (quickstart). This unlocks a wide range of applications, including semantic search, semantic textual similarity, and paraphrase mining.
 
-# A few areas of interest
+## A few areas of interest
 
 * Can we cluster wine reviews based on S-BERT embeddings?
 
@@ -22,7 +22,7 @@ Let's now take a look at other considerations with this dataset.
 
 * Can we leverage S-BERT embeddings to create a recommender system for "customers" that have tried several wines?
 
-# Wine Recommender
+# S-Bert Embeddings Wine Recommender
 
 Relying solely on Description embeddings tends to recommend wines from tasters with similar lexicons. As such, we can create embeddings for Variety and also for Title, then combine these with a weighted average. In the average, we can tweak the preference to favor Variety embeddings since the variety of a wine more closely aligns with a customer's flavor palate (rather than the title or the description). 
 ```
@@ -36,6 +36,12 @@ weight_price = .5
 df_user0_reccs2['weighted_customer_value'] = (df_user0_reccs2['points'] * weight_points) + -1*(df_user0_reccs2['price'] * weight_price)
 ```
 
-Using Averaged Embeddings (Description, Variety, and Title), for the preferred wine with title 'La Castellina 2007 Squarcialupi Riserva  (Chianti Classico)' and Variety: 'Sangiovese', the recommendations are shown below.
+Using Averaged Embeddings (Description, Variety, and Title), for the preferred wine with title 'La Castellina 2007 Squarcialupi Riserva  (Chianti Classico)' and Variety: 'Sangiovese', the recommendations are shown below. However, the final results still aren't great recommendations for the nuanced wine lover.
 
 <img src="https://github.com/mwheeler235/wine-reviews/blob/main/img/reccs.png" width=85% height=85%>
+
+## RAG (Retrieval-Augmented Generation) with Langchain, OpenAI, and FAISS
+
+* Langchain is an open source Python framework used to simplify the creations of applications, more specifically to integrate LLM API's and user prompts (questions about underlying documents).
+* FAISS stands for Facebook AI Similarity Search and can also be used to create vector embeddings for documents and to perform similarity search operations.
+* OpenAI is the large language model that is used for querying the document vectors

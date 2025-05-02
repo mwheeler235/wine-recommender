@@ -22,7 +22,7 @@ Let's now take a look at other considerations with this dataset.
 
 * Can we leverage S-BERT embeddings to create a recommender system for "customers" that have tried several wines?
 
-# S-Bert Embeddings Wine Recommender
+## S-Bert Embeddings Wine Recommender
 
 Relying solely on Description embeddings tends to recommend wines from tasters with similar lexicons. As such, we can create embeddings for Variety and also for Title, then combine these with a weighted average. In the average, we can tweak the preference to favor Variety embeddings since the variety of a wine more closely aligns with a customer's flavor palate (rather than the title or the description). 
 ```
@@ -46,10 +46,14 @@ Using Averaged Embeddings (Description, Variety, and Title), for the preferred w
 * FAISS stands for Facebook AI Similarity Search and can also be used to create vector embeddings for documents and to perform similarity search operations.
 * OpenAI is the large language model that is used for querying the document vectors
 
-This allows for mor nuanced document retrieval rather than just matching a specific wine based on descriptions. Let's take a look at a few inquiries:
+This allows for more nuanced document retrieval system rather than just matching specific wines based on a description. Let's take a look at a few examples:
 
-If we ask the model to "Suggest some Italian wines that are earthy" and then use a similar weighting methodology, the results look appropriate.
+If we ask the model to "Suggest some Italian wines that are earthy" and then we use a similar weighting methodology (for Price and Rating), the results look fairly appropriate.
 
-Now let's say you want to ask the model something more open ended and ambiguous like "What if I want to drink Rose all day?", Below are the results with k=3 specified.
+<img src="https://github.com/mwheeler235/wine-reviews/blob/main/img/earthy_italian.png" width=85% height=85%>
 
+Now let's say we want to ask the model something more ambiguous like "What if I want to drink Rose all day?", Below are the results with k=3 specified.
 
+<img src="https://github.com/mwheeler235/wine-reviews/blob/main/img/rose_all_day.png" width=85% height=85%>
+
+These certainly do appear to be great options for "Rose ALL DAY" ;) Of course, Vintage Year would be a very important consideration if we had access to more recent reviews. Overall, this RAG approach is more flexible and more accurate for retrieving wines based on nuanced preferences, i.e. for humans being human!

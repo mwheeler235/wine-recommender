@@ -45,3 +45,11 @@ Using Averaged Embeddings (Description, Variety, and Title), for the preferred w
 * Langchain is an open source Python framework used to simplify the creations of applications, more specifically to integrate LLM API's and user prompts (questions about underlying documents).
 * FAISS stands for Facebook AI Similarity Search and can also be used to create vector embeddings for documents and to perform similarity search operations.
 * OpenAI is the large language model that is used for querying the document vectors
+
+This allows for mor nuanced document retrieval rather than just matching a specific wine based on descriptions. Let's take a look at a few inquiries:
+
+If we ask the model to "Suggest some Italian wines that are earthy" and then use a similar weighting methodology, the results look appropriate.
+
+Now let's say you want to ask the model something more open ended and ambiguous like "What if I want to drink Rose all day?", Below are the results with k=3 specified.
+
+

@@ -28,7 +28,7 @@ Relying solely on Description embeddings tends to recommend wines from tasters w
 
 <img src="https://github.com/mwheeler235/wine-reviews/blob/main/img/fresh_tb.png" width=50% height=50%>
 
-As such, we can create embeddings for Variety and also for Title, then combine these with a weighted average. In the average, we can tweak the preference to favor Variety embeddings since the variety of a wine more closely aligns with a customer's flavor palate (rather than the title or the description). 
+To bypass the issue of lack of diversity in Descriptions, we can create embeddings for Variety and also for Title, then combine these with a weighted average. In the average, we can tweak the preference to favor Variety embeddings since the variety of a wine more closely aligns with a customer's flavor palate (rather than the title or the description). 
 ```
 combined_embeddings = ((1/2)*corpus_embeddings + 2*corpus_variety_embeddings + corpus_title_embeddings) / 3
 ```
@@ -48,7 +48,7 @@ Using Averaged Embeddings (Description, Variety, and Title), for the preferred w
 
 * Langchain is an open source Python framework used to simplify the creations of applications, more specifically to integrate LLM API's and user prompts (questions about underlying documents).
 * FAISS stands for Facebook AI Similarity Search and can also be used to create vector embeddings for documents and to perform similarity search operations.
-* OpenAI is the large language model that is used for querying the document vectors
+* OpenAI is the large language model that is used for querying the document vectors.
 
 This allows for more nuanced document retrieval system rather than just matching specific wines based on a description. Let's take a look at a few examples:
 

@@ -62,4 +62,4 @@ Now let's say we want to ask the model something more ambiguous like "What if I 
 
 These certainly do appear to be great options for "Rose ALL DAY" ;) Of course, Vintage Year would be a very important consideration if we had access to more recent reviews. Overall, this RAG approach is more flexible and more accurate for retrieving wines based on nuanced preferences, i.e. for humans being human!
 
-<img src="https://github.com/mwheeler235/wine-reviews/blob/main/img/rose_all_day_group.png" width=50% height=50%>
+<img src="https://github.com/mwheeler235/wine-reviews/blob/main/img/rose_all_day_group.png" width=20% height=20%>

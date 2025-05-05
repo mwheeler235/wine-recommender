@@ -24,7 +24,11 @@ Let's now take a look at other considerations with this dataset.
 
 ## S-Bert Embeddings Wine Recommender
 
-Relying solely on Description embeddings tends to recommend wines from tasters with similar lexicons. As such, we can create embeddings for Variety and also for Title, then combine these with a weighted average. In the average, we can tweak the preference to favor Variety embeddings since the variety of a wine more closely aligns with a customer's flavor palate (rather than the title or the description). 
+Relying solely on Description embeddings tends to recommend wines from tasters with similar lexicons. Unfortunately, there were no reviews mentioning "freshly opened can of tennis balls".
+
+<img src="https://github.com/mwheeler235/wine-reviews/blob/main/img/fresh_tb.png" width=50% height=50%>
+
+As such, we can create embeddings for Variety and also for Title, then combine these with a weighted average. In the average, we can tweak the preference to favor Variety embeddings since the variety of a wine more closely aligns with a customer's flavor palate (rather than the title or the description). 
 ```
 combined_embeddings = ((1/2)*corpus_embeddings + 2*corpus_variety_embeddings + corpus_title_embeddings) / 3
 ```
